@@ -1,0 +1,17 @@
+﻿@page "/fetchdata"
+@using CSharpSharedData;
+
+<PageTitle>Weather forecast</PageTitle>
+
+<h1>Weather forecast</h1>
+
+<p>This component demonstrates fetching data from memory.</p>
+
+<div class="grid">
+    <QuickGrid TGridItem="WeatherForecast" Items="@forecasts">
+        <PropertyColumn Property="@(p => p.Date)" Format="yyyy-MM-dd" Sortable="true" />
+        <PropertyColumn Property="@(p => p.TemperatureC)" Sortable="true" />
+        <PropertyColumn Property="@(p => p.TemperatureF)" Sortable="true" />
+        <PropertyColumn Property="@(p => p.Summary)" Sortable="true" />
+    </QuickGrid>
+</div>
